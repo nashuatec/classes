@@ -1,0 +1,20 @@
+class Alunos ():
+    def __init__(self, nome, materia, nota):
+        self.nome = nome
+        self.materia = materia
+        self.nota = int(nota)
+    
+    def aluno_completo(self):
+        return (f'{self.nome}{self.materia} {self.nota}')
+    def aluno_aprovado(self):
+        if self.nota> 7:
+            print("aprovado")
+        else:
+            pritn("reprovado")
+
+
+        
+aluno1 = Alunos('Andre', 'Ingles', '10')
+aluno2 = Alunos('Felipe', 'Matematica', '9')
+
+print(f'O aluno {aluno1.nome} foi {aluno1.aluno_aprovado()}, com a nota {aluno1.nota}')
