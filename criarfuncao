@@ -1,0 +1,20 @@
+
+class Funcionario():
+    def __init__ (self, nome, sobrenome, idade):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.idade = int(idade)
+
+    def nome_completo(self):
+        return (self.nome +' ' + self.sobrenome)
+    def idade_funcionario(self):
+        self.idade = int(2024 - self.idade)
+        return self.idade
+       
+
+usuario1 = Funcionario('felipe', 'cortez' ,'1989')
+usuario2 = Funcionario('andre', 'lamogria', '2010')
+usuario3 = Funcionario('sonia', 'abraao', '1985')
+
+print(Funcionario.idade_funcionario(usuario2))
+
