@@ -18,3 +18,34 @@ usuario3 = Funcionario('sonia', 'abraao', '1985')
 
 print(Funcionario.idade_funcionario(usuario2))
 
+#############################################
+class Verduras():
+    def __init__ (self, nome, tipo, maturacao,oferta):
+        self.nome =nome
+        self.tipo = tipo
+        self.maturacao = maturacao
+        self.oferta = oferta
+
+Banana = Verduras('Banan','prata','madura' ,'promo')
+maca = Verduras('maca','argentina', 'madura', 'promo2')
+uva = Verduras('uva','Italia','verde', 'Promo3')
+
+print(Banana.nome, Banana.tipo)
+
+
+#######################################
+class Alunos():
+    def __init__(self, nome, idade):
+     self.nome = nome
+     self.idade = idade
+    def nome_completo(self):
+
+       return (self.nome +' '+ self.idade)
+      
+    
+aluno1 = Alunos('Agenor', '10anos')
+aluno2 = Alunos('Bruno', '12anos')
+
+print(aluno1.nome_completo())
+
+
