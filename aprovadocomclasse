@@ -18,3 +18,28 @@ aluno1 = Alunos('Andre', 'Ingles', '10')
 aluno2 = Alunos('Felipe', 'Matematica', '9')
 
 print(f'O aluno {aluno1.nome} foi {aluno1.aluno_aprovado()}, com a nota {aluno1.nota}')
+
+
+
+########
+
+
+class Meses:
+    def __init__(self):
+        self.meses = [
+            "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+        ]
+
+    def obter_mes(self, numero):
+        if 1 <= numero <= 12:
+            return self.meses[numero - 1]
+        else:
+            return "Número inválido. Insira um número entre 1 e 12."
+
+# Cria uma instância da classe
+meses = Meses()
+
+# Solicita ao usuário que insira um número
+numero = int(input("Digite um número entre 1 e 12 para obter o mês correspondente: "))
+print(meses.obter_mes(numero))
