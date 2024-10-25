@@ -1,0 +1,16 @@
+class Dados():
+    def __init__(self, nome, sobrenome, idade, cidade):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.idade = idade
+        self.cidade = cidade
+    
+usuario1=Dados(input("digite o nome:"), input("digite o sobrenome:"), input("digite a idade:"), input("digite a cidade:"))
+usuario2=Dados(input("digite o nome:"), input("digite o sobrenome:"), input("digite a idade:"), input("digite a cidade:"))
+usuario3=Dados(input("digite o nome:"), input("digite o sobrenome:"), input("digite a idade:"), input("digite a cidade:"))
+
+
+print(f"o nome do usuario eh {usuario1.nome} {usuario1.sobrenome} ele tem {usuario1.idade} e mora em {usuario1.cidade}")    
+print(f"o nome do usuario eh {usuario2.nome} {usuario2.sobrenome} ele tem {usuario2.idade} e mora em {usuario2.cidade}")    
+print(f"o nome do usuario eh {usuario3.nome} {usuario3.sobrenome} ele tem {usuario3.idade} e mora em {usuario3.cidade}")    
+
