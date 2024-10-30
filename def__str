@@ -1,0 +1,22 @@
+class Verduras():
+    def __init__(self, tipo, estado,valor):
+        self.tipo = tipo
+        self.estado = estado
+        self.valor = valor
+    def __str__(self):
+        return f'Verduras:{self.tipo}, Estado: {self.estado}, valor: {self.valor}'
+
+maca= Verduras ('maca', 'madura', 'R$30')
+pera = Verduras('pera', 'verde', 'R$60')
+morango = Verduras('morango', 'maduro', 'R$80')
+uva= Verduras(input('digite o nome da uva'), input('digite o estado'), input('digite o valor'))
+
+
+
+
+print(maca)
+print(pera )
+print(morango)
+print(uva)
+# print(f'tipo:{maca.tipo}, estado: {maca.estado}, valor: {maca.valor}')
+# print(f'tipo: {morango.tipo}, estado: {morango.estado}), valor: {morango.valor}')
