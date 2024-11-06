@@ -1,14 +1,30 @@
 class ContaBancaria:
     def __init__(self, saldo_inicial=0):
-        self.__saldo = saldo_inicial
+        self._saldo = saldo_inicial  # Atributo privado
 
     def depositar(self, valor):
         if valor > 0:
-            self.__saldo += valor
+            self._saldo += valor
+            print(f"Depósito de R${valor} realizado com sucesso.")
+        else:
+            print("Valor de depósito inválido.")
 
     def sacar(self, valor):
-        if 0 < valor <= self.__saldo:
-            self.__saldo -= valor
+        if valor > self._saldo:
+            print("Saldo insuficiente para realizar o saque.")
+        elif valor > 0:
+            self._saldo -= valor
+            print(f"Saque de R${valor} realizado com sucesso.")
+        else:
+            print("Valor de saque inválido.")
 
-    def obter_saldo(self):
-        return self.__saldo
+    def mostrar_saldo(self):
+        return f"Saldo atual: R${self._saldo}"
+
+# Exemplo de uso
+conta = ContaBancaria(100)
+conta.depositar(50)
+print(conta.mostrar_saldo())
+conta.sacar(30)
+print(conta.mostrar_saldo())
+conta.sacar(200)  # Teste de saldo insuficiente
