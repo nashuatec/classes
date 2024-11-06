@@ -1,0 +1,14 @@
+class ContaBancaria:
+    def __init__(self, saldo_inicial=0):
+        self.__saldo = saldo_inicial
+
+    def depositar(self, valor):
+        if valor > 0:
+            self.__saldo += valor
+
+    def sacar(self, valor):
+        if 0 < valor <= self.__saldo:
+            self.__saldo -= valor
+
+    def obter_saldo(self):
+        return self.__saldo
